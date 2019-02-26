@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shul_Event_Planner_2.Data;
 
 namespace Shul_Event_Planner_2.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190224040457_migration15")]
+    partial class migration15
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -219,20 +221,6 @@ namespace Shul_Event_Planner_2.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("CalendarName");
-
-                    b.Property<string>("HolidayName");
-
-                    b.Property<DateTime>("HolidayStart");
-
-                    b.Property<DateTime>("MaarivStart");
-
-                    b.Property<DateTime>("MinchaStart");
-
-                    b.Property<string>("ParshaName");
-
-                    b.Property<DateTime>("ShabbosStart");
-
-                    b.Property<DateTime>("ShacharisStart");
 
                     b.Property<int>("TwoDigitYearMax");
 

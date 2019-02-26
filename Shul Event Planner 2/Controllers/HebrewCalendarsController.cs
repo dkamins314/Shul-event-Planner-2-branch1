@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Shul_Event_Planner_2.Data;
 using Shul_Event_Planner_2.Models;
 
+
 namespace Shul_Event_Planner_2.Controllers
 {
     public class HebrewCalendarsController : Controller
@@ -56,7 +57,7 @@ namespace Shul_Event_Planner_2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CalendarName,TwoDigitYearMax")] HebrewCalendar hebrewCalendar)
+        public async Task<IActionResult> Create([Bind("Id,CalendarName,TwoDigitYearMax")] System.Globalization.HebrewCalendar hebrewCalendar)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +89,7 @@ namespace Shul_Event_Planner_2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CalendarName,TwoDigitYearMax")] HebrewCalendar hebrewCalendar)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CalendarName,TwoDigitYearMax")] Models.HebrewCalendar hebrewCalendar)
         {
             if (id != hebrewCalendar.Id)
             {

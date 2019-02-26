@@ -7,6 +7,10 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Zmanim;
+using Zmanim.TimeZone;
+using Zmanim.TzDatebase;
+using Zmanim.Utilities;
 
 namespace Shul_Event_Planner_2
 {
@@ -15,6 +19,7 @@ namespace Shul_Event_Planner_2
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
+            
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

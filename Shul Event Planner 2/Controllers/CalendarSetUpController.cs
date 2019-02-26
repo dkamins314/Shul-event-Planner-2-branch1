@@ -60,7 +60,7 @@ namespace Shul_Event_Planner_2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TitleOfScheduleS,Address,City,ZipCode,Country,GeolocationCoordinates")] CalendarSetUp calendarSetUp)
+        public async Task<IActionResult> Create([Bind("Id,TitleOfSchedule,Address,City,ZipCode,Country,GeolocationCoordinates")] CalendarSetUp calendarSetUp)
         {
             if (ModelState.IsValid)
             {

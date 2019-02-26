@@ -9,20 +9,29 @@ using System.Threading;
 
 namespace Shul_Event_Planner_2.Models
 {
-    [System.Runtime.InteropServices.ComVisible(true)]
-    [System.Serializable]
-    public class HebrewCalendar : System.Globalization.Calendar
 
+
+    public class HebrewCalendar : System.Globalization.Calendar
     {
+        public HebrewCalendar()
+        {
+        }
+
         public int Id { get; set; }
         public string CalendarName { get; set; }
-        
-        public override DateTime AddMonths(DateTime time, int months)
+        public string ParshaName { get; set; }
+        public string HolidayName { get; set; }
+        public DateTime ShabbosStart { get; set; }
+        public DateTime HolidayStart { get; set; }
+        public DateTime ShacharisStart { get; set; }
+        public DateTime MinchaStart { get; set; }
+        public DateTime MaarivStart { get; set; }
 
+
+
+        public override DateTime AddMonths(DateTime time, int months)
         {
-            var newTime=time;
-            var newMonth= months;
-            return (newTime);
+            throw new NotImplementedException();
         }
 
         public override DateTime AddYears(DateTime time, int years)
@@ -94,8 +103,8 @@ namespace Shul_Event_Planner_2.Models
         {
             throw new NotImplementedException();
         }
-
         public override int[] Eras { get; }
+
+
     }
-    
 }
